@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #232323;
+}
+a:hover {
+  color: #1c437e;
+  transition: color 500ms;
+}
+h1 {
+  font-size: 48px;
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  opacity: 0.5;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  height: 9vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  /* margin-top: 1rem; */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  margin-right: 3rem;
+  color: #232323;
+}
+
+.searchbar {
+  width: 345px;
+  height: 45px;
+}
+
+.search-form {
+  height: 100%;
+}
+.search-input {
+  height: 100%;
+  width: 85%;
+  border: none;
+  background-color: #4E6892;
+  color: white;
+  border-radius: 10px 0 0 10px;
+  padding-left: 1rem;
+}
+.search-input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+.search-input:focus {
+  outline: none;
+}
+.search-btn {
+  background-color: #4E6892;
+  cursor: pointer;
+  width: 15%;
+  color: white;
+  border: none;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 0 10px 10px 0;
+}
+.search-btn:focus {
+  opacity: 0.8;
+  outline-color: #4E6892;
+}
+/* End of Navbar */
+
+/* Start of Main Body home */
+.main-home {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 91vh; */
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 100;
+  color: #464646;
+  margin-top: 0.5rem;
+}
+
+.btn-group {
+  margin-top: 1.5rem;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+}
+.follow-btn {
+  background-color: #4d92fa;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  height: 58px;
+  margin-bottom: 1rem;
+}
+.download-btn {
+  background-color: #325A98;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  height: 58px;
+  margin-bottom: 1rem;
+}
+.learnmore-btn {
+  background-color: #31353A;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  height: 58px;
+  margin-bottom: 1rem;
+}
+
+.img-content {
+  width: 466px;
+  height: 400px;
+}
+.img-content img {
+  width: 100%;
+  height: 100%;
+}
+.icon {
+  font-size: 16px;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
