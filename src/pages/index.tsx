@@ -1,18 +1,15 @@
 import React from 'react'
-import Footer from '../components/Footer'
 import Landing from '../components/Landing'
+import Layout from '../components/Layout'
 import LearnMore from '../components/LearnMore'
-import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <main className="main-home">
         <Landing />
       </main>
       <LearnMore />
-      <Footer />
-    </>
+    </Layout>
   )
 }

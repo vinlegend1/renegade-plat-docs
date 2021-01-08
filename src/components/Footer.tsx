@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="footer">
             <ul className="footer-links">
                 <li>Open Source</li>
-                <li><Link href="/"><a>Github</a></Link></li>
+                <li><Link href="https://github.com"><a>Github</a></Link></li>
             </ul>
             <ul className="footer-links">
                 <li>Developer</li>
