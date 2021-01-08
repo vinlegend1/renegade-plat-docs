@@ -1,8 +1,7 @@
-import '../styles/globals.css'
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
+import '../styles/home.css'
+import '../styles/footer.css'
+import '../styles/about.css'
+import '../styles/small_components/card.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

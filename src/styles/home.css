@@ -19,33 +19,46 @@ button:focus {
 }
 button:hover {
   opacity: 0.5;
+  transition: ease-out 400ms;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Needs Media Query */
 .navbar {
   height: 9vh;
   width: 90%;
   margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  
   padding-top: 1rem;
   /* margin-top: 1rem; */
 }
 
+/* Needs Media Query */
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Needs media query */
 .nav-links {
   display: flex;
   list-style: none;
 }
 
+/* Needs media query */
 .nav-link {
   margin-right: 3rem;
   color: #232323;
 }
 
+/* Maybe Needs media query */
 .searchbar {
   width: 345px;
   height: 45px;
@@ -84,16 +97,36 @@ body {
   opacity: 0.8;
   outline-color: #4E6892;
 }
+
+/* Needs media query */
+.burger {
+  display: none;
+}
+.burger div {
+  width: 40px;
+  height: 4px;
+  background-color: #4E6892;
+  border-radius: 1px;
+  margin-bottom: 5px;
+}
+/* Needs media query */
+.navbar-header-mobile {
+  font-size: 24px;
+  color: #4E6892;
+  display: none;
+}
 /* End of Navbar */
 
 /* Start of Main Body home */
+
+/* Needs media query */
 .main-home {
   width: 90%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* height: 91vh; */
+  margin-top: 6rem;
 }
 
 .subtitle {
@@ -103,6 +136,7 @@ body {
   margin-top: 0.5rem;
 }
 
+/* Needs Media Query */
 .btn-group {
   margin-top: 1.5rem;
   width: 230px;
@@ -137,6 +171,7 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Needs media query */
 .img-content {
   width: 466px;
   height: 400px;
@@ -149,4 +184,76 @@ body {
   font-size: 16px;
   margin-left: 0.2rem;
   margin-right: 0.2rem;
+}
+
+@media only screen and (max-width: 651px) {
+  .navbar-content {
+    display: none;
+  }
+  .navbar-content.responsive {
+    position: absolute;
+    padding-top: 1rem;
+    bottom: 0px;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    width: 100%;
+    height: 91vh;
+  }
+  .nav-links {
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 80%;
+  }
+  .nav-link {
+    margin: 0;
+    font-size: 18px;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    top: 16px;
+  }
+
+  .navbar-header-mobile {
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 90px;
+  }
+
+  .searchbar {
+    width: 300px;
+  }
+
+  .main-home {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .subtitle {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .img-content {
+    width: 304px;
+    height: 304px;
+    margin-bottom: 1rem;
+  }
 }
