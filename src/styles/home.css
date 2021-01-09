@@ -5,11 +5,12 @@
 }
 a {
   text-decoration: none;
-  color: #232323;
+  color: #1750a5;
 }
 a:hover {
-  color: #1c437e;
-  transition: color 500ms;
+  color: #548ce0;
+  transition: color 400ms ease-out;
+  text-decoration: underline;
 }
 h1 {
   font-size: 48px;
@@ -56,6 +57,15 @@ body {
 .nav-link {
   margin-right: 3rem;
   color: #232323;
+}
+
+.nav-link a {
+  color: #232323;
+}
+.nav-link a:hover {
+  color: #1c437e;
+  transition: color 400ms ease-out;
+  text-decoration: none;
 }
 
 /* Maybe Needs media query */

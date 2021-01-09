@@ -23,7 +23,7 @@ const LearnMore = () => {
 
     return (
         <div id="about">
-            <Card imgSrc="/PKMNRenPlatLogo.svg" title="What is Pokemon Renegade Platinum?" description={whatIsPokemonRenegadePlatinum} />
+            <Card imgSrc="/PKMNRenPlatLogo.svg" title="What is Pokemon Renegade Platinum" description={whatIsPokemonRenegadePlatinum} />
             <Card imgSrc="/romhackicon.svg" title="What is a ROM Hack?" description={whatIsRomHack} />
             <Card imgSrc="shouldyouplayicon.svg" title="Should You Play Renegade Platinum?" description={shouldYouPlayRenPlat} />
         </div>

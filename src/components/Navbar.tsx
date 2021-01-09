@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className={`navbar-header-mobile  ${isActive ? "responsive" : ""}`}>Renegade Platinum</div>
             <div className={`navbar-content ${isActive ? "responsive" : ""}`}>
                 <ul className="nav-links">
-                    <li className="nav-link"><Link href="/"><a>Pokedex</a></Link></li>
+                    <li className="nav-link"><Link href="/pokedex"><a>Pokedex</a></Link></li>
                     <li className="nav-link"><Link href="/"><a>Trainer Battles</a></Link></li>
                     <li className="nav-link"><Link href="/"><a>Item Locations</a></Link></li>
                 </ul>

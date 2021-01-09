@@ -10,8 +10,8 @@ const Card: React.FC<Props> = ({ description, imgSrc, title }) => {
     return (
         <div className="card">
             <img src={imgSrc} alt={title} className="card-img" />
-            <div className="card-title">{title}</div>
-            <div className="card-description">{description}</div>
+            <p className="card-title">{title}</p>
+            <p className="card-description">{description}</p>
         </div>
     )
 }
