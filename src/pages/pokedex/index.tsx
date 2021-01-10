@@ -13,7 +13,7 @@ const Pokedex = () => {
             </div>
             <div className="pokedex-page">
                 {
-                    pokedexRenPlat.map(({ Name, NationalID, Type1, Type2 }) => {
+                    pokedexRenPlat.map(({ Name, NationalID, Type1, Type2 }, index) => {
                         const pokemonName = Name === "Mr. Mime" ? "mr-mime" : Name === "Farfetch'd" ? "farfetchd" : Name === "Nidoran♀" ? "nidoran-f" : Name === "Nidoran♂" ? "nidoran-m" : Name === "Mime Jr." ? "mime-jr" : Name === "Giratina" ? "giratina-altered" : Name === "Shaymin" ? "shaymin-land" : Name.toLowerCase()
 
                         return (
@@ -24,7 +24,7 @@ const Pokedex = () => {
                                 type1={Type1}
                                 type2={Type2}
                                 id={pokemonName}
-                                key={NationalID}
+                                key={`${NationalID}${index}`}
                             />
                         )
                     })

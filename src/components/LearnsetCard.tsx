@@ -1,4 +1,5 @@
 import React from 'react'
+import { colours } from '../constants';
 import allTheMoves from "../minjson/pokemonMoves.min.json";
 
 interface Props {
@@ -16,13 +17,13 @@ const LearnsetCard: React.FC<Props> = ({ pokemonName, learnset }) => {
             <h3>Move Learned by Level Up</h3>
             <p>{pokemonName} learns the following moves in Pokemon Renegade Platinum at the specified levels below.</p>
             <div className="label-group">
-                <div className="learnset-label">Lv.</div>
-                <div className="learnset-label">Move</div>
-                <div className="learnset-label">Type</div>
-                <div className="learnset-label">Cat.</div>
-                <div className="learnset-label">Power</div>
-                <div className="learnset-label">Acc.</div>
-                <div className="learnset-label">Sec. Effect</div>
+                <div className="learnset-label level-label">Lv.</div>
+                <div className="learnset-label move-label">Move</div>
+                <div className="learnset-label type-label">Type</div>
+                <div className="learnset-label cat-label">Cat.</div>
+                <div className="learnset-label att-label">Power</div>
+                <div className="learnset-label acc-label">Acc.</div>
+                {/* <div className="learnset-label">Sec. Effect</div> */}
             </div>
             <div className="learnset-data-group">
                 {learnset.map(({ level, move }, index) => {
@@ -31,13 +32,13 @@ const LearnsetCard: React.FC<Props> = ({ pokemonName, learnset }) => {
                     // console.log("selectMove: ", selectedMove)
                     return (
                         <div key={move + index} className="pkmn-move-data">
-                            <div>{level}</div>
-                            <div>{move}</div>
-                            <div>{selectedMove["Type"]}</div>
-                            <div>{selectedMove["Cat."]}</div>
-                            <div>{selectedMove["Att."]}</div>
-                            <div>{selectedMove["Acc."]}</div>
-                            <div>{selectedMove["secEffect"]}</div>
+                            <div className="pkmn-move-level">{level}</div>
+                            <div className="pkmn-move-move">{move}</div>
+                            <div className="pkmn-move-type" style={{ background: colours[selectedMove["Type"].toLowerCase()] }}>{selectedMove["Type"]}</div>
+                            <div className="pkmn-move-cat">{selectedMove["Cat."]}</div>
+                            <div className="pkmn-move-att">{selectedMove["Att."]}</div>
+                            <div className="pkmn-move-acc">{selectedMove["Acc."]}</div>
+                            {/* <div>{selectedMove["secEffect"]}</div> */}
                         </div>
                     )
                 })}

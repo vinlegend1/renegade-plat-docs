@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import React from 'react'
 import Layout from '../../components/Layout';
-import { colours, pokemonTypes } from '../../constants';
+import { colours, effectiveColours, pokemonTypes } from '../../constants';
 import pokedexRenPlat from "../../minjson/completePokedexRenPlat.min.json"
 import { PokemonInfoType } from '../../types';
 import typeCoverage from "../../minjson/pokemonTypeCoverage.min.json";
@@ -15,56 +15,70 @@ interface Props {
 }
 
 const PokemonInfo: React.FC<Props> = ({ pokemon: { Ability1, Ability2, Atk, Def, HP, Name, NationalID, SpA, SpD, Spe, Type1, Type2 }, slug }) => {
-    const imgSrc = `https://img.pokemondb.net/artwork/${slug}.jpg`
+    const pkmn = slug === "giratina" ? "giratina-altered" : slug;
+    const imgSrc = `https://img.pokemondb.net/artwork/${pkmn}.jpg`
 
 
     return (
         <Layout>
-            <div className="pkmn-info-wrapper">
-                <div className="pokedex-pkmn-container">
-                    <img src={imgSrc} className="pokedex-img" />
-                    <h3 className="pokedex-pkmn-name">{Name}</h3>
-                    <p>Image from <Link href="https://pokemondb.net"><a target="_blank">pokemondb.net</a></Link></p>
-                </div>
-                <div className="pkmn-info-card">
-                    <div className="pkmn-info-id">
-                        <p>NationalID</p>
-                        <p>{NationalID}</p>
+            <div className="pkmn-info-page-wrap">
+                <div className="pkmn-info-wrapper">
+                    <div className="pokedex-pkmn-container">
+                        <img src={imgSrc} className="pokedex-img" />
+                        <h3 className="pokedex-pkmn-name">{Name}</h3>
+                        <p className="pokemondb-credit">Image from <Link href="https://pokemondb.net"><a target="_blank">pokemondb.net</a></Link></p>
                     </div>
-                    <div className="pkmn-info-type-wrap">
-                        <p>Type</p>
-                        <div className="pkmn-info-type">
-                            <div className="pkmn-info-type-1">{Type1}</div>
-                            <div className="pkmn-info-type-2">{Type2}</div>
+                    <div className="pkmn-info-card">
+                        <div className="pkmn-info-id">
+                            <p className="pkmn-info-label">NationalID</p>
+                            <p className="pkmn-national-id">{NationalID}</p>
                         </div>
-                    </div>
-                    <div className="pkmn-info-abilities-wrap">
-                        <p>Abilities</p>
-                        <div className="pkmn-info-abilities">
-                            <div className="pkmn-info-ability-1">{Ability1}</div>
-                            <div className="pkmn-info-ability-2">{Ability2}</div>
-                        </div>
-                    </div>
-                </div>
-                <div className="pkmn-type-defense">
-                    <h4 className="pkmn-type-defense-head">Type Defenses</h4>
-                    <p className="pkmn-type-defense-sub">The effectiveness of each type on {Name}</p>
-                    {pokemonTypes.map(type => {
-                        const currPokemonType = typeCoverage.find(data => (data.type1 === Type1 || data.type1 === Type2) && (data.type2 === Type1 || data.type2 === Type2))
-                        console.log(currPokemonType);
-                        const typeIndex = pokemonTypes.indexOf(type);
-
-                        return (
-                            <div key={type} className="pkmn-type-effect">
+                        <div className="pkmn-info-type-wrap">
+                            <p>Type</p>
+                            <div className="pkmn-info-type">
                                 <div
-                                    style={{ color: "white", backgroundColor: colours[type.toLowerCase()], width: "2rem", height: "2rem", textAlign: "center", verticalAlign: "middle", lineHeight: "2rem", borderRadius: "5px", fontSize: "14px" }}
-                                >
-                                    {type.slice(0, 3)}
-                                </div>
-                                <div>{currPokemonType.defensiveCoverage[typeIndex]}</div>
+                                    className="pkmn-info-type-block"
+                                    style={{ backgroundColor: colours[Type1.toLowerCase()] }}
+                                >{Type1}</div>
+                                <div
+                                    className="pkmn-info-type-block"
+                                    style={{ backgroundColor: colours[Type2.toLowerCase()] }}
+                                >{Type2}</div>
                             </div>
-                        )
-                    })}
+                        </div>
+                        <div className="pkmn-info-abilities-wrap">
+                            <p>Abilities</p>
+                            <div className="pkmn-info-abilities">
+                                <div className="pkmn-info-ability-1">1. {Ability1}</div>
+                                <div className="pkmn-info-ability-2">{Ability2 ? `2. ${Ability2}` : null}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="pkmn-type-defense">
+                        <h4 className="pkmn-type-defense-head">Type Defenses</h4>
+                        <p className="pkmn-type-defense-sub">The effectiveness of each type on {Name}</p>
+                        <div className="pkmn-type-defense-block">
+                            {pokemonTypes.map(type => {
+                                const currPokemonType = typeCoverage.find(data => (data.type1 === Type1 || data.type1 === Type2) && (data.type2 === Type1 || data.type2 === Type2))
+                                console.log(currPokemonType);
+                                const typeIndex = pokemonTypes.indexOf(type);
+
+                                return (
+                                    <div key={type} className="pkmn-type-effect">
+                                        <div
+                                            style={{ color: "white", backgroundColor: colours[type.toLowerCase()], }}
+                                        >
+                                            {type.slice(0, 3)}
+                                        </div>
+                                        <div
+                                            style={{ backgroundColor: effectiveColours[`${currPokemonType.defensiveCoverage[typeIndex]}`], color: "white", marginTop: "0.25rem" }}
+                                        >{currPokemonType.defensiveCoverage[typeIndex]}
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
                 </div>
                 <StatCard HP={HP} Atk={Atk} Def={Def} SpA={SpA} SpD={SpD} Spe={Spe} />
                 <LearnsetCard pokemonName={Name} learnset={pokedexRenPlat.find(pokemon => pokemon.Name === Name).learnset} />

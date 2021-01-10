@@ -28,4 +28,13 @@ export const statColours = {
     overpowered: "#1B613B"
 }
 
+export const effectiveColours = {
+    "0": "#4b4b4b",
+    "0.25": "#BC4722",
+    "0.5": "#531A08",
+    "1": "#fff",
+    "2": "#69C81E",
+    "4": "#0D5120"
+}
+
 export const pokemonTypes = ['Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel', 'Fire', 'Water', 'Grass', 'Electric', 'Psychic', 'Ice', 'Dragon', 'Dark', 'Fairy'];
