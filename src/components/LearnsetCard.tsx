@@ -1,6 +1,7 @@
 import React from 'react'
 import { colours } from '../constants';
 import allTheMoves from "../minjson/pokemonMoves.min.json";
+import Link from "next/link"
 
 interface Props {
     pokemonName: string;
@@ -33,7 +34,7 @@ const LearnsetCard: React.FC<Props> = ({ pokemonName, learnset }) => {
                     return (
                         <div key={move + index} className="pkmn-move-data">
                             <div className="pkmn-move-level">{level}</div>
-                            <div className="pkmn-move-move">{move}</div>
+                            <Link href={`/moves/${move.toLowerCase().replace(" ", "-")}`}><a className="pkmn-move-move">{move}</a></Link>
                             <div className="pkmn-move-type" style={{ background: colours[selectedMove["Type"].toLowerCase()] }}>{selectedMove["Type"]}</div>
                             <div className="pkmn-move-cat">{selectedMove["Cat."]}</div>
                             <div className="pkmn-move-att">{selectedMove["Att."]}</div>

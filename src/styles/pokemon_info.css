@@ -15,6 +15,7 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
     justify-content: center;
 }
 @media screen and (max-width: 1071px) and (min-width: 704px) {
@@ -38,7 +39,8 @@
 }
 
 .pokedex-img {
-    width: 90%;
+    width: 300px;
+    height: 310px;
 }
 
 .pkmn-info-card, .pkmn-type-defense {
@@ -128,6 +130,7 @@
     padding-bottom: 1.5rem;
     padding-left: 3rem;
     padding-right: 3rem;
+    margin-bottom: 2rem;
 }
 @media screen and (max-width: 403px) {
     .pkmn-base-stats {
@@ -159,7 +162,9 @@
 .stat-bar {
     margin-left: 1rem;
 }
-.pkmn-learnset {
+
+/* Grid Method */
+/* .pkmn-learnset {
     border-radius: 10px;
     box-shadow: 0 10px 10px 6px rgba(0, 0, 0, 0.25);
     width: 90%;
@@ -167,6 +172,46 @@
     margin-right: auto;
     padding-left: 3rem;
     padding-right: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-row-gap: 2rem;
+    grid-column-gap: 2rem;
+}
+.pkmn-learnset h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    grid-column: 1 / 7;
+}
+.pkmn-learnset p {
+    font-size: 0.875rem;
+    color: #2d2d2d;
+    grid-column: 1 / 7;
+}
+.label-group, .pkmn-move-data {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1 / 7;
+}
+.learnset-data-group {
+    grid-column: 1 / 7;
+}
+.learnset-label, .pkmn-move-level, .pkmn-move-move {
+    font-size: 1.5rem;
+} */
+
+/* Flex Method */
+.pkmn-learnset {
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 6px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     margin-bottom: 2rem;
@@ -195,7 +240,7 @@
 .learnset-label, .pkmn-move-data div {
     margin-bottom: 1rem;
 }
-.pkmn-move-data div {
+.pkmn-move-data a, .pkmn-move-data div {
     line-height: 2.5rem;
     vertical-align: middle;
 }
@@ -232,4 +277,119 @@
 }
 .pkmn-move-move {
     font-weight: 500;
+}
+
+@media screen and (max-width: 696px) {
+    .pkmn-learnset {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .learnset-label, .pkmn-move-level, .pkmn-move-move {
+        font-size: 1.5rem;
+    }
+    .learnset-label {
+        margin-bottom: 1rem;
+        font-size: 12px;
+    }
+    .pkmn-move-data div {
+        line-height: 1.5rem;
+        vertical-align: middle;
+        font-size: 10px;
+    }
+    .level-label, .pkmn-move-level {
+        width: 1.5rem;
+        text-align: end;
+        margin-right: 1rem;
+    }
+    .pkmn-move-move, .move-label {
+        width: 12.5rem;
+        margin-right: 1rem;
+    }
+    .pkmn-move-type, .type-label {
+        width: 6rem;
+        margin-right: 1rem;
+        text-align: center;
+    }
+    .pkmn-move-type {
+        color: white;
+        border-radius: 6px;
+        height: 1.5rem;
+        font-size: 8px;
+    }
+    .pkmn-move-cat, .cat-label {
+        width: 4rem;
+        font-size: 10px;
+        margin-right: 1rem;
+    }
+    .pkmn-move-att, .att-label {
+        width: 4.375rem;
+        margin-right: 1rem;
+    }
+    .pkmn-move-acc, .acc-label {
+        width: 4rem;
+    }
+    .pkmn-move-move {
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .pkmn-learnset {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .learnset-label, .pkmn-move-level, .pkmn-move-move {
+        font-size: 1.5rem;
+    }
+    .learnset-label {
+        margin-bottom: 1rem;
+        font-size: 10px;
+    }
+    .pkmn-move-data div {
+        line-height: 1.5rem;
+        vertical-align: middle;
+        font-size: 8px;
+    }
+    .level-label, .pkmn-move-level {
+        width: 1.5rem;
+        text-align: end;
+        margin-right: 1rem;
+    }
+    .pkmn-move-move, .move-label {
+        width: 12.5rem;
+        margin-right: 1rem;
+    }
+    .pkmn-move-type, .type-label {
+        width: 6rem;
+        margin-right: 1rem;
+        text-align: center;
+    }
+    .pkmn-move-type {
+        color: white;
+        border-radius: 6px;
+        height: 1.5rem;
+        font-size: 6px;
+    }
+    .pkmn-move-cat, .cat-label {
+        width: 4rem;
+        font-size: 10px;
+        margin-right: 1rem;
+    }
+    .pkmn-move-att, .att-label {
+        width: 4.375rem;
+        margin-right: 1rem;
+    }
+    .pkmn-move-acc, .acc-label {
+        width: 4rem;
+        margin-right: 0;
+    }
+    .pkmn-move-move {
+        font-weight: 600;
+    }
 }

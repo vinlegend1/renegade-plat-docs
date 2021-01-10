@@ -49,8 +49,8 @@ const PokemonInfo: React.FC<Props> = ({ pokemon: { Ability1, Ability2, Atk, Def,
                         <div className="pkmn-info-abilities-wrap">
                             <p>Abilities</p>
                             <div className="pkmn-info-abilities">
-                                <div className="pkmn-info-ability-1">1. {Ability1}</div>
-                                <div className="pkmn-info-ability-2">{Ability2 ? `2. ${Ability2}` : null}</div>
+                                <div className="pkmn-info-ability-1">1. <Link href={`/abilities/${Ability1.toLowerCase().replace(" ", "-")}`}><a>{Ability1}</a></Link></div>
+                                <div className="pkmn-info-ability-2">{Ability2 ? "2. " : null} {Ability2 ? <Link href={`/abilities/${Ability2.toLowerCase().replace(" ", "-")}`}><a>{Ability2}</a></Link> : null}</div>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ const PokemonInfo: React.FC<Props> = ({ pokemon: { Ability1, Ability2, Atk, Def,
                         <div className="pkmn-type-defense-block">
                             {pokemonTypes.map(type => {
                                 const currPokemonType = typeCoverage.find(data => (data.type1 === Type1 || data.type1 === Type2) && (data.type2 === Type1 || data.type2 === Type2))
-                                console.log(currPokemonType);
+                                // console.log(currPokemonType);
                                 const typeIndex = pokemonTypes.indexOf(type);
 
                                 return (
