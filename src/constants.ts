@@ -30,8 +30,8 @@ export const statColours = {
 
 export const effectiveColours = {
     "0": "#4b4b4b",
-    "0.25": "#BC4722",
-    "0.5": "#531A08",
+    "0.25": "#531A08",
+    "0.5": "#BC4722",
     "1": "#fff",
     "2": "#69C81E",
     "4": "#0D5120"
