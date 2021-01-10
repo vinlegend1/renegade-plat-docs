@@ -15,7 +15,7 @@ const LearnsetCard: React.FC<Props> = ({ pokemonName, learnset }) => {
 
     return (
         <div className="pkmn-learnset">
-            <h3>Move Learned by Level Up</h3>
+            <h3>Moves Learned by Level Up</h3>
             <p>{pokemonName} learns the following moves in Pokemon Renegade Platinum at the specified levels below.</p>
             <div className="label-group">
                 <div className="learnset-label level-label">Lv.</div>

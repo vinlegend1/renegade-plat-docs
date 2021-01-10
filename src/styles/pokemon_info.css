@@ -41,6 +41,7 @@
 .pokedex-img {
     width: 300px;
     height: 310px;
+    object-fit: contain;
 }
 
 .pkmn-info-card, .pkmn-type-defense {
@@ -151,7 +152,7 @@
 }
 .stat-name {
     color: #232323;
-    width: 90px;
+    width: 95px;
     text-align: end;
     margin-right: 1rem;
 }
