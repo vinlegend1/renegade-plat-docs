@@ -294,7 +294,7 @@
         margin-bottom: 1rem;
         font-size: 12px;
     }
-    .pkmn-move-data div {
+    .pkmn-move-data div, .pkmn-move-data a {
         line-height: 1.5rem;
         vertical-align: middle;
         font-size: 10px;
@@ -351,7 +351,7 @@
         margin-bottom: 1rem;
         font-size: 10px;
     }
-    .pkmn-move-data div {
+    .pkmn-move-data div, .pkmn-move-data a {
         line-height: 1.5rem;
         vertical-align: middle;
         font-size: 8px;
