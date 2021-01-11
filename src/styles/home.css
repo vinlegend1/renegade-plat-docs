@@ -206,7 +206,7 @@ body {
   .navbar-content.responsive {
     position: absolute;
     padding-top: 1rem;
-    top: 0px;
+    top: 10vh;
     background: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column-reverse;
