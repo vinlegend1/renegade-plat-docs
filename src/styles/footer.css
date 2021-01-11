@@ -18,6 +18,10 @@
 .footer-links li {
     margin-bottom: 0.75rem;
 }
+.footer-links li a {
+    color: #3b3b3b;
+    
+}
 
 @media only screen and (max-width: 651px) {
     .footer {

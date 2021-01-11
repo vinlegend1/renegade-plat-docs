@@ -16,3 +16,19 @@ export interface PokemonInfoType {
         move: string;
     }[];
 }
+
+export interface AbilityType {
+    AbilityName: string;
+    Description: string;
+}
+
+export interface MoveType {
+    Name: string;
+    Type: string;
+    "Cat.": string;
+    PP: number;
+    "Att.": number;
+    "Acc.": number;
+    secEffect: string;
+    Description: string;
+}

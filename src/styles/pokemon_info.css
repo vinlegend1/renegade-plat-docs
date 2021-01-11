@@ -32,6 +32,9 @@
     height: 380px;
     text-align: center;
 }
+.pokedex-pkmn-name {
+    font-size: 24px;
+}
 .pokemondb-credit {
     font-size: 12px;
     color: #232323;

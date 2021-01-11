@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div></div>
                 <div></div>
             </div>
-            <div className={`navbar-header-mobile  ${isActive ? "responsive" : ""}`}>Renegade Platinum</div>
+            <div className={`navbar-header-mobile  ${isActive ? "responsive" : ""}`}><Link href="/"><a>Renegade Platinum</a></Link></div>
             <div className={`navbar-content ${isActive ? "responsive" : ""}`}>
                 <ul className="nav-links">
                     <li className="nav-link"><Link href="/pokedex"><a>Pokedex</a></Link></li>
