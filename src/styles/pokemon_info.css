@@ -238,13 +238,15 @@
 .learnset-data-group {
     display: flex;
     flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .learnset-label, .pkmn-move-level, .pkmn-move-move {
     font-size: 1.5rem;
 }
-.learnset-label, .pkmn-move-data div {
+/* .learnset-label, .pkmn-move-data div {
     margin-bottom: 1rem;
-}
+} */
 .pkmn-move-data a, .pkmn-move-data div {
     line-height: 2.5rem;
     vertical-align: middle;
@@ -278,7 +280,6 @@
 }
 .pkmn-move-acc, .acc-label {
     width: 4.375rem;
-    margin-right: 1rem;
 }
 .pkmn-move-move {
     font-weight: 500;
@@ -296,7 +297,6 @@
         font-size: 1.5rem;
     }
     .learnset-label {
-        margin-bottom: 1rem;
         font-size: 12px;
     }
     .pkmn-move-data div, .pkmn-move-data a {
@@ -310,7 +310,7 @@
         margin-right: 1rem;
     }
     .pkmn-move-move, .move-label {
-        width: 12.5rem;
+        width: 100px;
         margin-right: 1rem;
     }
     .pkmn-move-type, .type-label {
@@ -353,7 +353,6 @@
         font-size: 1.5rem;
     }
     .learnset-label {
-        margin-bottom: 1rem;
         font-size: 10px;
     }
     .pkmn-move-data div, .pkmn-move-data a {
@@ -362,28 +361,31 @@
         font-size: 8px;
     }
     .level-label, .pkmn-move-level {
-        width: 1.5rem;
+        width: 1rem;
         text-align: end;
         margin-right: 1rem;
     }
     .pkmn-move-move, .move-label {
-        width: 12.5rem;
+        width: 65px;
         margin-right: 1rem;
     }
     .pkmn-move-type, .type-label {
-        width: 6rem;
         margin-right: 1rem;
         text-align: center;
     }
+    .type-label {
+        width: 6rem;
+    }
     .pkmn-move-type {
+        width: 5.5rem;
         color: white;
-        border-radius: 6px;
+        border-radius: 5px;
         height: 1.5rem;
         font-size: 6px;
     }
     .pkmn-move-cat, .cat-label {
         width: 4rem;
-        font-size: 12px;
+        font-size: 10px;
         margin-right: 1rem;
     }
     .pkmn-move-att, .att-label {
