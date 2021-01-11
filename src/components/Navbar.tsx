@@ -19,7 +19,7 @@ const Navbar = () => {
             <div className={`navbar-content ${isActive ? "responsive" : ""}`}>
                 <ul className="nav-links">
                     <li className="nav-link"><Link href="/pokedex"><a>Pokedex</a></Link></li>
-                    <li className="nav-link"><Link href="/"><a>Trainer Battles</a></Link></li>
+                    <li className="nav-link"><Link href="/abilities"><a>Abilities</a></Link></li>
                     <li className="nav-link"><Link href="/items"><a>Item Locations</a></Link></li>
                 </ul>
                 <div className="searchbar">
