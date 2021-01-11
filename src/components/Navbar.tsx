@@ -20,7 +20,7 @@ const Navbar = () => {
                 <ul className="nav-links">
                     <li className="nav-link"><Link href="/pokedex"><a>Pokedex</a></Link></li>
                     <li className="nav-link"><Link href="/"><a>Trainer Battles</a></Link></li>
-                    <li className="nav-link"><Link href="/"><a>Item Locations</a></Link></li>
+                    <li className="nav-link"><Link href="/items"><a>Item Locations</a></Link></li>
                 </ul>
                 <div className="searchbar">
                     <form className="search-form">

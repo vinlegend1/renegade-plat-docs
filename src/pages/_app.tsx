@@ -4,6 +4,7 @@ import '../styles/about.css'
 import '../styles/pokedex.css'
 import '../styles/abilities.css'
 import '../styles/move.css'
+import '../styles/items.css'
 import '../styles/pokemon_info.css'
 import '../styles/small_components/card.css'
 

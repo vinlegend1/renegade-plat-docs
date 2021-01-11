@@ -233,6 +233,7 @@
 .label-group, .pkmn-move-data {
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
 }
 .learnset-data-group {
     display: flex;
