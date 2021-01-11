@@ -51,6 +51,7 @@
 }
 .pkmn-w-move h3 {
     font-size: 18px;
+    margin-top: 2rem;
 }
 
 @media screen and (max-width: 422px) {
