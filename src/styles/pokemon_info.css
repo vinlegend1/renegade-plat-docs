@@ -326,7 +326,7 @@
     }
     .pkmn-move-cat, .cat-label {
         width: 4rem;
-        font-size: 10px;
+        font-size: 12px;
         margin-right: 1rem;
     }
     .pkmn-move-att, .att-label {
@@ -383,7 +383,7 @@
     }
     .pkmn-move-cat, .cat-label {
         width: 4rem;
-        font-size: 10px;
+        font-size: 12px;
         margin-right: 1rem;
     }
     .pkmn-move-att, .att-label {
