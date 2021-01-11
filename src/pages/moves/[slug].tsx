@@ -55,7 +55,7 @@ const Move: React.FC<Props> = ({ move }) => {
                     </div>
                 </div>
                 <div className="pkmn-w-move">
-                    <h3>Pokemon that Learn {move.Name} on Level Up</h3>
+                    <h3>Pokemon that Learn {move.Name} via Level Up</h3>
                     <p>All images found on this page and other pages are from <Link href="https://pokemondb.net"><a target="_blank">pokemondb.net</a></Link></p>
                 </div>
                 <div className="pkmn-w-move-wrap">
