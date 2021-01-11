@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "build:export": "next build && next export",
     "test": "jest",
     "netlify:deploy": "netlify deploy -p -m \"$(git log -1 --pretty=%B)\""
   },
