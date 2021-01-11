@@ -21,3 +21,5 @@ jobs:
       - run:
           name: Run tests
           command: yarn test
+      - run: yarn build
+      - run: yarn netlify:deploy
