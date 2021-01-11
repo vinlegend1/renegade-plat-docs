@@ -18,7 +18,7 @@ const AbilitiesIndex: React.FC<Props> = ({ abilities }) => {
                     <h3 className="abilities-desc">Description</h3>
                 </div>
                 {abilities.map(({ AbilityName, Description }) => (
-                    <div className="abilities-data">
+                    <div className="abilities-data" id={AbilityName.toLowerCase().replace(" ", "-")} key={AbilityName.toLowerCase().replace(" ", "-")}>
                         <div className="abilities-data-name">
                             <Link href={`/abilities/${AbilityName.toLowerCase().replace(" ", "-")}`}><a>{AbilityName}</a></Link>
                         </div>

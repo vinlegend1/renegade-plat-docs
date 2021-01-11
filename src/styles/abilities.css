@@ -9,7 +9,7 @@
     font-size: 32px;
     margin-bottom: 0.5rem;
 }
-.abilities-wrapper p {
+.abilities-wrapper p, .pkmn-w-ability p {
     color: #2d2d2d;
 }
 .abilities-index-wrapper {
@@ -43,6 +43,15 @@
 }
 .abilities-data p {
     width: 650px;
+}
+/* abilities slug page */
+.pkmn-w-ability {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.pkmn-w-ability h3 {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
 }
 @media screen and (max-width: 624px) {
     .abilities-label {

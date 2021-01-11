@@ -27,8 +27,13 @@ export interface MoveType {
     Type: string;
     "Cat.": string;
     PP: number;
-    "Att.": number;
-    "Acc.": number;
+    "Att.": number | string;
+    "Acc.": number | string;
     secEffect: string;
     Description: string;
+}
+
+export interface SimpleMoveType {
+    level: number;
+    move: string;
 }
