@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <footer className="footer">
             <ul className="footer-links">
                 <li>Open Source</li>
                 <li><Link href="https://github.com/vinlegend1/renegade-plat-docs"><a>Github</a></Link></li>
@@ -13,7 +13,7 @@ const Footer = () => {
                 <li><Link href="https://twitter.com/vince_tech1"><a>Twitter</a></Link></li>
             </ul>
             <div className="copyright-thing">&copy; 2021 Vincent Hong</div>
-        </div>
+        </footer>
     )
 }
 
